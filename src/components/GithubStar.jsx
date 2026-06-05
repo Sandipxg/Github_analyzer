@@ -1,7 +1,7 @@
 export default function GithubStar() {
   return (
     <a
-      href="https://github.com/sameer9860/github-profile-analyzer"
+      href="https://github.com/Sandipxg/Github_analyzer"
       target="_blank"
       rel="noopener noreferrer"
       className="github-star-button"
