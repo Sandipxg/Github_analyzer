@@ -37,16 +37,27 @@ export default function Home({ onSelectMode }) {
         <h1>GitHub Profile Analyzer And Comparison Tool</h1>
       </motion.div>
 
+
       {/* HERO SECTION */}
-      <motion.div
-        className="hero-section"
-        variants={itemVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <h2>Choose Your Path</h2>
-        <p>Analyze and compare GitHub developers with visual insights</p>
-      </motion.div>
+<motion.div
+  className="hero-section"
+  variants={itemVariants}
+  initial="hidden"
+  animate="visible"
+>
+  <h2>Analyze, Compare & Export GitHub Profiles</h2>
+  <p>
+    Get detailed GitHub insights, compare developers side-by-side,
+    and export profile data with ease.
+  </p>
+
+  <button
+    className="launch-btn"
+    onClick={() => onSelectMode("analyzer")}
+  >
+    🚀 Launch Analyzer
+  </button>
+</motion.div>
 
       {/* MODE SELECTOR */}
       <motion.div
@@ -82,6 +93,7 @@ export default function Home({ onSelectMode }) {
             <li>💻 Language breakdown</li>
             <li>🏆 Repository insights</li>
             <li>📈 Activity metrics</li>
+            <li>📁 Export profile data</li>
           </ul>
         </motion.button>
 
