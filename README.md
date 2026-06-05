@@ -13,34 +13,34 @@ A professional, high-fidelity **React & Vite-based developer analytics dashboard
 ## 📸 Preview
 
 ### Dashboard Overview
-![Dashboard Overview](/github-profile-analyzer/public/gpa1.png)
-![Dashboard Overview](/github-profile-analyzer/public/gpa1o.png)
+![Dashboard Overview](./public/gpa1.png)
+![Dashboard Overview](./public/gpa1o.png)
 
 ### 📊 Analyzer Mode
 Detailed breakdown of user stats, repositories, and languages.
-![Analyzer Screenshot](/github-profile-analyzer/public/gpa2.png)
-![Analyzer Screenshot](/github-profile-analyzer/public/gpa2o.png)
-![Analyzer Screenshot](/github-profile-analyzer/public/gpa3.png)
-![Analyzer Screenshot](/github-profile-analyzer/public/gpa3o.png)
+![Analyzer Screenshot](./public/gpa2.png)
+![Analyzer Screenshot](./public/gpa2o.png)
+![Analyzer Screenshot](./public/gpa3.png)
+![Analyzer Screenshot](./public/gpa3o.png)
 
 ### 🆚 Comparison Mode
 Compare two GitHub profiles side-by-side to see who has more contributions, followers, and better stats.
-![Comparison Screenshot](/github-profile-analyzer/public/gpa4.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa5o.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa5.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa6o.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa6.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa7o.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa7.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa8o.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa8.png)
-![Comparison Screenshot](/github-profile-analyzer/public/gpa9o.png)
+![Comparison Screenshot](./public/gpa4.png)
+![Comparison Screenshot](./public/gpa5o.png)
+![Comparison Screenshot](./public/gpa5.png)
+![Comparison Screenshot](./public/gpa6o.png)
+![Comparison Screenshot](./public/gpa6.png)
+![Comparison Screenshot](./public/gpa7o.png)
+![Comparison Screenshot](./public/gpa7.png)
+![Comparison Screenshot](./public/gpa8o.png)
+![Comparison Screenshot](./public/gpa8.png)
+![Comparison Screenshot](./public/gpa9o.png)
 
 ### 📥 Download Mode
 Download single profile or two-profile comparisons as custom-paginated PDFs.
-![Download Screenshot](/github-profile-analyzer/public/gpa15o.png)
-![Download Screenshot](/github-profile-analyzer/public/gpa16o.png)
-![Download Screenshot](/github-profile-analyzer/public/gpa17o.png)
+![Download Screenshot](./public/gpa15o.png)
+![Download Screenshot](./public/gpa16o.png)
+![Download Screenshot](./public/gpa17o.png)
 
 ---
 
@@ -141,11 +141,11 @@ Determines developer specialties based on primary programming language distribut
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sameer9860/github-profile-analyzer.git
+   git clone https://github.com/Sandipxg/Github_analyzer.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Github-Profile-Analyzer/github-profile-analyzer
+   cd Github_analyzer
    ```
 3. Install project dependencies:
    ```bash
