@@ -11,35 +11,24 @@ A professional, high-fidelity **React & Vite-based developer analytics dashboard
 
 ## 📸 Preview
 
-### Dashboard Overview
-![Dashboard Overview](./public/gpa1.png)
-![Dashboard Overview](./public/gpa1o.png)
+### 🏠 Homepage
+![Homepage](./public/screenshots/homepage.png)
 
-### 📊 Analyzer Mode
-Detailed breakdown of user stats, repositories, and languages.
-![Analyzer Screenshot](./public/gpa2.png)
-![Analyzer Screenshot](./public/gpa2o.png)
-![Analyzer Screenshot](./public/gpa3.png)
-![Analyzer Screenshot](./public/gpa3o.png)
+### 📊 Profile Analysis
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <img src="./public/screenshots/profile_analysis_01.png" alt="Profile Analysis Part 1" />
+    </td>
+    <td width="50%">
+      <img src="./public/screenshots/profile_analysis_02.png" alt="Profile Analysis Part 2" />
+    </td>
+  </tr>
+</table>
 
-### 🆚 Comparison Mode
-Compare two GitHub profiles side-by-side to see who has more contributions, followers, and better stats.
-![Comparison Screenshot](./public/gpa4.png)
-![Comparison Screenshot](./public/gpa5o.png)
-![Comparison Screenshot](./public/gpa5.png)
-![Comparison Screenshot](./public/gpa6o.png)
-![Comparison Screenshot](./public/gpa6.png)
-![Comparison Screenshot](./public/gpa7o.png)
-![Comparison Screenshot](./public/gpa7.png)
-![Comparison Screenshot](./public/gpa8o.png)
-![Comparison Screenshot](./public/gpa8.png)
-![Comparison Screenshot](./public/gpa9o.png)
-
-### 📥 Download Mode
-Download single profile or two-profile comparisons as custom-paginated PDFs.
-![Download Screenshot](./public/gpa15o.png)
-![Download Screenshot](./public/gpa16o.png)
-![Download Screenshot](./public/gpa17o.png)
+### 🆚 Profile Comparison
+Compare two GitHub profiles side-by-side:
+![Profile Comparison](./public/screenshots/profile_compare.png)
 
 ---
 
