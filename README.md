@@ -5,8 +5,7 @@ A professional, high-fidelity **React & Vite-based developer analytics dashboard
 [![React](https://img.shields.io/badge/React-19.0-61DAFB?logo=react&logoColor=black&style=flat-square)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite&logoColor=white&style=flat-square)](https://vitejs.dev)
 [![Recharts](https://img.shields.io/badge/Recharts-3.7-22B573?logo=chart&style=flat-square)](https://recharts.org)
-[![TailwindCSS Compatibility](https://img.shields.io/badge/Styling-Custom%20CSS-blue?style=flat-square)](#)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](#)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 ---
 
@@ -44,126 +43,75 @@ Download single profile or two-profile comparisons as custom-paginated PDFs.
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Documentation
 
-The project is structured under an active Single Page Application (SPA) architecture utilizing custom hooks for data orchestration, Recharts for data visualizations, and standard HTML5/CSS3 glassmorphic design variables.
+To support open-source contributions and maintainability, the project includes structured guides for developers:
 
-```mermaid
-graph TD
-    A[App.jsx] --> B[Home.jsx]
-    A --> C[Dashboard.jsx]
-    A --> D[ComparisonView.jsx]
-    
-    C --> E[ProfileCard.jsx]
-    E --> F[useGithubProfile hook]
-    E --> G[ScoreBadge.jsx]
-    E --> H[LanguageChart.jsx]
-    E --> I[TimelineChart.jsx]
-    E --> J[RepoAuditPanel.jsx]
-    E --> K[RepoList.jsx]
-    
-    D --> L[ComparisonSearch.jsx]
-    D --> M[Comparison.jsx]
-    M --> N[ComparisonMetrics.jsx]
-    
-    E -.-> O[ExportPdfButton.jsx]
-    N -.-> O
-    O --> P[exportPdf.js]
-    P --> Q[html2canvas / html-to-image]
-    P --> R[jsPDF Multi-Page Renderer]
-```
-
-### Component Breakdown & Data Flow
-1. **React State Router (`App.jsx`)**: Manages navigation routing between `home`, `analyzer`, and `comparison` modes, wrapped with `framer-motion`'s `AnimatePresence` for smooth transition animations.
-2. **Profile Orchestrator (`ProfileCard.jsx`)**: Calls the `useGithubProfile` React Hook, computes advanced dev statistics, classifies the user, and coordinates layout components.
-3. **Analytics Visualization Layer**:
-   * **Language Analyzer (`LanguageChart.jsx`)**: Renders language distribution via a Recharts Donut PieChart and custom CSS progress percentages.
-   * **Audit Panel (`RepoAuditPanel.jsx`)**: Evaluates repository compliance rates, documentation coverage, and open-source licensing.
-   * **Timeline Panel (`TimelineChart.jsx`)**: Generates repository creation history over calendar years using a Recharts BarChart.
-4. **Interactive Repositories List (`RepoList.jsx`)**: Employs client-side search indexing and multi-criteria sorting (Stars, Forks, Size, Last Updated) with custom pagination controls.
-5. **PDF Engine (`exportPdf.js` / `ExportPdfButton.jsx`)**: Captures DOM structures dynamically under custom styles (applying `.pdf-capture-active` to format layouts into 1200px printing blocks), generates raw canvases using CORS proxies, and processes multi-page pagination outputs using `jsPDF`.
+- **[ARCHITECTURE.md](ARCHITECTURE.md)**: Details the design patterns, React hooks, data flow, and PDF generation pipeline.
+- **[CONTRIBUTING.md](CONTRIBUTING.md)**: Outlines workspace setup, linting rules, code conventions, and pull request procedures.
+- **[ROADMAP.md](ROADMAP.md)**: Highlights future milestones and features planned for the platform.
 
 ---
 
-## 🧮 Custom Algorithms
+## 💡 What Works Today
 
-### 1. Developer Score Formula
-The application calculates a customized developer score reflecting repository popularity, active engagement, and community size:
-
-$$\text{Developer Score} = (\text{Total Stars} \times 2) + \text{Total Forks} + \text{Followers} + (\text{Active Original Repos} \times 3)$$
-
-#### Score Tiers:
-* **`> 1000`**: OSS Legend (Red Badge)
-* **`> 500`**: Elite Developer (Green Badge)
-* **`> 200`**: Rising Star (Blue Badge)
-* **`> 50`**: Active Contributor (Yellow Badge)
-* **`<= 50`**: GitHub Enthusiast (Gray Badge)
-
-### 2. Developer Persona Classifier
-Determines developer specialties based on primary programming language distributions in their public repositories:
-* **Frontend Architect**: Dominant language in `JavaScript`, `TypeScript`, `HTML`, `CSS`.
-* **Systems Architect**: Dominant language in `Go`, `Rust`, `C++`, `C`, `Java`.
-* **Data Scientist / AI Dev**: Dominant language in `Python`, `R`, `Julia`, `Jupyter Notebook`.
-* **Backend Specialist**: Dominant language in `PHP`, `Ruby`.
-* **DevOps Engineer**: Dominant language in `Shell`, `PowerShell`.
+- **Direct Profile Search**: Instant lookup of any public GitHub developer with clean loading skeletons and error boundaries.
+- **Developer Score calculation**: Custom rating algorithms based on public repo counts, forks, stars, and follower counts.
+- **Repository Quality Audit**: Automated calculation of originality rates, documentation coverage, license availability, and homepage deployment rates.
+- **Interactive Data Visualizations**:
+  - **Language Diagnostics**: Recharts-based interactive Donut PieChart and custom CSS progress percentages.
+  - **Activity Timeline**: Year-over-year project creation activity charts.
+- **Side-by-Side Comparison**: Comprehensive side-by-side metrics comparing two developers across stars, forks, and final scores.
+- **A4 PDF Exporting**: Clean multi-page PDF generation via CORS-friendly canvas capturing for developer summaries.
+- **Responsive Theme Engine**: Light/Dark theme switching utilizing global CSS custom properties.
 
 ---
 
-## ✨ Features
+## 🛠️ Stack & Technologies
 
-- 🔍 **Search & Index**: Look up any public GitHub developer with immediate error boundaries and skeleton loaders.
-- 📊 **Language Diagnostics**: Interactive pie charts accompanied by progress bars indicating code percentages.
-- 📈 **Creation Timeline**: Year-over-year project creation chart detailing developer activity history.
-- 🛡️ **Repo Quality Audit**: Automated calculation of original projects, readme documentation rate, licensing rate, and homepage deployments.
-- ⚙️ **Interactive Repo Search**: Live filtering, sorting, and pagination of user repositories.
-- 🆚 **Side-by-Side Comparison**: Complete statistical analysis matching two developers across repositories, followers, stars, forks, and final developer scores.
-- 📥 **Clean PDF Exporting**: Layout translation to standard formats for high-resolution A4 multi-page document downloads.
-
----
-
-## 🛠 Tech Stack
-
-* **Frontend Framework**: React 19 (Vite compilation)
-* **Data Visualization**: Recharts (SVG-based charting)
-* **PDF Processing**: html2canvas, html-to-image, jsPDF (multi-page styling and CORS handling)
+* **Frontend Framework**: React 19 (compiled with `rolldown-vite` / Vite)
+* **Data Visualization**: Recharts (SVG-based charts)
+* **PDF Compilation**: html2canvas, html-to-image, jsPDF
 * **Animation**: Framer Motion
-* **Styling**: Vanilla CSS3 (Custom variables, dark/light theme systems, responsive flex/grid layouts)
-* **Data Layer**: GitHub REST API v3
+* **Styling**: Vanilla CSS3 (glassmorphic layout variables, grid/flex structures)
+* **Data Layer**: GitHub REST API v3 (unauthenticated public endpoints)
 
 ---
 
-## ▶️ Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 * Node.js (v18.0.0 or higher)
 * npm
 
-### Installation
+### Local Setup
 1. Clone the repository:
    ```bash
    git clone https://github.com/Sandipxg/Github_analyzer.git
-   ```
-2. Navigate to the project directory:
-   ```bash
    cd Github_analyzer
    ```
-3. Install project dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:5173` in your browser.
 
-### Running Locally
-To launch the developer server:
-```bash
-npm run dev
-```
-Open your browser and navigate to `http://localhost:5173`.
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-### Production Build
-To build and bundle the project for production:
-```bash
-npm run build
-```
+---
+
+## ⚠️ Current Caveats
+
+- **GitHub API Rate Limits**: Unauthenticated clients are restricted by GitHub to a default rate limit of 60 requests per hour.
+- **CORS Avatar Capture**: Profile pictures from GitHub are processed through a CORS canvas fetcher (`useExportableAvatarSrc`) to prevent image tainting on exported PDFs. If the client cannot connect to GitHub's avatar subdomain, avatars will fall back to placeholders in downloads.
+- **State Router**: The application uses a React state router (`mode === "home" | "analyzer" | "comparison"`), meaning the browser's back/forward buttons will not navigate between views.
 
 ---
 
